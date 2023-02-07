@@ -1,6 +1,5 @@
-from frictionless import Package, Resource, Layout, Dialect
+from frictionless import Package, Resource, Layout
 from frictionless.plugins.excel import ExcelDialect
-import pandas as pd
 
 dialect = ExcelDialect(sheet=2, fill_merged_cells=True)
 layout = Layout(header_rows=[3, 4], header_join = '-', pick_fields = list(range(1,16)), pick_rows = list(range(1, 84))) # skip_rows=['<blank>']

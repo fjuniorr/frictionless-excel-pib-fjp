@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 dp = Package('datapackage.json')
-pib_mg = dp.get_resource('pib_mg').to_pandas()
+pib_mg = dp.get_resource('15.12_anexo-estatistico-pibmg-2021-3-valores').to_pandas()
 
 # indice temporal
 pib_mg.index = pd.date_range(start = '01/01/2002', periods = pib_mg.shape[0], freq = 'Q')
